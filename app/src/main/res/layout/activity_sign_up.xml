@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".SignUp">
+
+  <TextView
+      android:id="@+id/signupTV"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="32dp"
+      android:fontFamily="@font/inter_bold"
+      android:text="Sign Up"
+      android:textColor="@color/black"
+      android:textSize="22sp"
+      app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+      app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+      app:layout_constraintStart_toStartOf="@+id/scrollView2" />
+
+  <ScrollView
+      android:id="@+id/scrollView2"
+      android:layout_width="match_parent"
+      android:layout_height="400dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:scrollbars="none"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/boxName"
+          style="@style/LoginTextInputLayoutStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:hint="Full Name"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:startIconDrawable="@drawable/ic_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameET"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:singleLine="true" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/boxUsernme"
+          style="@style/LoginTextInputLayoutStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:hint="Username"
+          app:layout_constraintEnd_toEndOf="@+id/boxName"
+          app:layout_constraintStart_toStartOf="@+id/boxName"
+          app:layout_constraintTop_toBottomOf="@+id/boxName"
+          app:startIconDrawable="@drawable/ic_username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameET"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:singleLine="true" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/boxContact"
+          style="@style/LoginTextInputLayoutStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:hint="Contact Number"
+          app:layout_constraintEnd_toEndOf="@+id/boxUsernme"
+          app:layout_constraintStart_toStartOf="@+id/boxUsernme"
+          app:layout_constraintTop_toBottomOf="@+id/boxUsernme"
+          app:startIconDrawable="@drawable/ic_contactnumber">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contactET"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:singleLine="true" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/boxEmail"
+          style="@style/LoginTextInputLayoutStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:hint="Email"
+          app:layout_constraintEnd_toEndOf="@+id/boxContact"
+          app:layout_constraintStart_toStartOf="@+id/boxContact"
+          app:layout_constraintTop_toBottomOf="@+id/boxContact"
+          app:startIconDrawable="@drawable/ic_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailET"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:singleLine="true" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/boxPassword"
+          style="@style/LoginTextInputLayoutStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:hint="Password"
+          app:endIconMode="password_toggle"
+          app:layout_constraintEnd_toEndOf="@+id/boxEmail"
+          app:layout_constraintStart_toStartOf="@+id/boxEmail"
+          app:layout_constraintTop_toBottomOf="@+id/boxEmail"
+          app:startIconDrawable="@drawable/ic_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordET"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/boxbarangay"
+          style="@style/LoginDropDownLayoutStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:hint="Barangay"
+          app:startIconDrawable="@drawable/ic_location"
+          app:layout_constraintEnd_toEndOf="@+id/boxPassword"
+          app:layout_constraintStart_toStartOf="@+id/boxPassword"
+          app:layout_constraintTop_toBottomOf="@+id/boxPassword">
+
+        <AutoCompleteTextView
+            android:id="@+id/barangayET"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:singleLine="true" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/boxzone"
+          style="@style/LoginDropDownLayoutStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:hint="Zone"
+          app:layout_constraintEnd_toEndOf="@+id/boxbarangay"
+          app:layout_constraintStart_toStartOf="@+id/boxbarangay"
+          app:layout_constraintTop_toBottomOf="@+id/boxbarangay"
+          app:startIconDrawable="@drawable/ic_location">
+
+        <AutoCompleteTextView
+            android:id="@+id/zoneET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/boxBirthday"
+          style="@style/LoginTextInputLayoutStyle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:hint="Birhday"
+          app:endIconDrawable="@drawable/ic_spinner"
+          app:endIconMode="custom"
+          app:layout_constraintEnd_toEndOf="@+id/boxzone"
+          app:layout_constraintStart_toStartOf="@+id/boxzone"
+          app:layout_constraintTop_toBottomOf="@+id/boxzone"
+          app:startIconDrawable="@drawable/ic_birthday">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/birthdayET"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:inputType="date"
+            android:singleLine="true" />
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </ScrollView>
+
+  <Button
+      android:id="@+id/signupBTN"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="32dp"
+      android:fontFamily="@font/inter_semibold"
+      android:text="SIGN UP"
+      app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+      app:layout_constraintStart_toStartOf="@+id/scrollView2"
+      app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+  <Button
+      android:id="@+id/alreadyaccountBTN"
+      style="@style/Widget.MaterialComponents.Button.TextButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/inter_semibold"
+      android:text="Already have an account"
+      android:textAllCaps="false"
+      app:layout_constraintEnd_toEndOf="@+id/signupBTN"
+      app:layout_constraintStart_toStartOf="@+id/signupBTN"
+      app:layout_constraintTop_toBottomOf="@+id/signupBTN" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

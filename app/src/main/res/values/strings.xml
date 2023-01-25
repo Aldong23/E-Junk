@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">E-Junk</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="loading">Loading...</string>
+
+    <string name="email_verification_to">You\'re almost there! We sent an email to </string>
+    <string name="email_verification_how">Just click the link in that email to complete your sign up. If you don\'nt receive it, you may need to check your spam folder.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
